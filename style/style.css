@@ -1,0 +1,196 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 3fr;
+}
+
+.header {
+    position: relative;
+    z-index: 2;
+    height: 100px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo {
+   
+   width: 500px;
+   z-index: 2;
+}
+
+.header-phone {
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: clamp(0.938rem, 0.617vw + 0.787rem, 1.25rem);
+    font-weight: 700;
+    font-family: inherit;
+}
+
+.about {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    position: relative;
+}
+
+.main-photo {
+  
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+ 
+  top: 0;
+}
+
+.about::after {
+    content: '';
+    position: absolute;
+
+    background: linear-gradient(to bottom, rgba(197, 64, 0, 0.8) 1%, rgba(197, 64, 0, 0) 100%);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.contacts-info {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    color: rgb(255, 85, 0);
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 1px;
+    font-style: normal;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    width: 40%;
+}
+
+.menu-btn {
+    background-color: transparent;
+    border: solid rgb(255, 85, 0);
+    color: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: inherit;
+    width: calc(100% - 20px);
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.menu-btn:hover {
+    background-color: rgb(255, 85, 0);
+    color: black;
+}
+
+address {
+    font-style: normal;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.link:not(.menu):hover {
+    text-decoration: underline;
+}
+
+.map {
+    width: 60%;
+    height: 400px;
+    border: 0;
+}
+
+
+footer {
+    background-color: rgb(255, 92, 16);
+
+    text-align: center;
+    padding: 10px;
+}
+
+footer .logo {
+    width: 350px;
+}
+
+.copyright {
+    font-size: 15px;
+    margin: 5px;
+}
+
+@media (width < 700px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+      
+
+    }
+    .header {
+        background-color: rgb(255, 92, 16);
+        justify-content: space-between;
+        border-block-end: 2px solid black;
+        padding: 0;
+    }
+
+    .logo {
+        justify-self: flex-start;
+        width:250px;
+
+    }
+    .header-phone {
+        position: static;
+    }
+
+    .main-photo {
+        height: 100vh;
+    }
+
+    .contacts-info {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .map {
+        width: 100%;
+        border-block-end: 2px solid black;
+    }
+
+    .contacts {
+        width: 100%;
+
+    }
+}
