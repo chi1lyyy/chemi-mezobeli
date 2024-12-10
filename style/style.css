@@ -128,10 +128,9 @@ address {
     display: block;
 }
 
-.link:not(.menu):hover {
+.contacts-info .link:not(.menu):hover {
     text-decoration: underline;
     color: rgba(255, 85, 0, 0.877)
-    
 }
 
 
