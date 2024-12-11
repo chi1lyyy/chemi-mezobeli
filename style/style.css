@@ -134,7 +134,6 @@ address {
 }
 
 
-
 .map {
     width: 60%;
     height: 400px;
@@ -196,12 +195,22 @@ footer .logo {
         padding: 0;
     }
 
-    .map {
+    iframe {
+        display: none;
+    }
+    
+
+   /* .map {
         width: 100%;
     }
+    */
 
     .contacts {
         width: 100%;
-
+        flex-direction: column-reverse;
+        gap: 5px;
+    }
+    .menu-btn {
+       padding: 15px;
     }
 }
